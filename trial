@@ -4,7 +4,7 @@
 #piratebhai
 Login=pirates-`</dev/urandom tr -dc a-c | head -c4`
 mumetndase="1"
-Pass=`</dev/urandom tr -dc a-f0-9 | head -c9`
+Pass=`</dev/urandom tr -dc 2-3 | head -c4`
 IP=`ifconfig eth0:0| awk 'NR==2 {print $2}'| awk -F: '{print $2}'`
 useradd -e `date -d "$mumetndase days" +"%Y-%m-%d"` -s /bin/false -M $Login
 echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
